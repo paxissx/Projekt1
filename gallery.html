@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<script>
+    var x = 1;
+
+    function iterate(){
+        if(x===4) x=1;
+        else x++;
+        return x;
+    }
+
+    function render_text() {
+        var number =iterate();
+        return "<center><img src=\"./images/" + number + ".jpg\" alt " + number + ".jpg\" height=\"350\" width=\"240\" style=\" margin: auto; padding: 10px; border: 1px solid black;\"></center><br>"
+    }
+
+    $(window).scroll(function(){
+        if ($(window).scrollTop() > $(document).height()-$(window).height()-1){
+            $("body").append(render_text());
+        }
+    });
+</script>
+
+<body>
+<div class="main">
+    <div class="nav">
+        <ul class="parent">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a>
+                <ul class="child">
+                    <li><a href="landscapes.html">Landscapes</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="img">
+    <center><img src = "images/4.jpg" height="350" width="240" style=" margin: auto; padding: 10px; border: 1px solid black;"></center><br>
+    <center><img src = "images/1.jpg" height="350" width="240" style=" margin: auto; padding: 10px; border: 1px solid black;"></center><br>
+    <center><img src = "images/2.jpg" height="350" width="240" style=" margin: auto; padding: 10px; border: 1px solid black;"></center><br>
+    <center><img src = "images/3.jpg" height="350" width="240" style=" margin: auto; padding: 10px; border: 1px solid black;"></center><br>
+    <center><img src = "images/4.jpg" height="350" width="240" style=" margin: auto; padding: 10px; border: 1px solid black;"></center><br>
+    <center><img src = "images/1.jpg" height="350" width="240" style=" margin: auto; padding: 10px; border: 1px solid black;"></center><br>
+</div>
+
+
+
+</body>
+</html>
